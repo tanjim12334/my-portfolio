@@ -55,6 +55,14 @@
   
   .logo {
     height: 80px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+  }
+  .logo img {
+    width: 100%;
+    height: auto;
   }
   
   .text-content h1 {
