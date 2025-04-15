@@ -7,153 +7,180 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="dark-mode-toggle">
+    <label>
+      <input type="checkbox" id="darkToggle">
+      🌙 Dark Mode
+    </label>
+  </div>
+
   <header>
-
-
-    <div class="profile-pic">
-      <img src="untitled-n.jpg" alt="Nirob">
-  </div>
-  <div class="intro">
-      <h1>Nirob</h1>
-      <h2>Web Developer</h2>
-      <p>I am a self-motivated web developer passionate about modern UI and creativity.</p>
-      <div class="buttons">
-          <a href="#" class="circle-btn green">Resume</a>
-          <a href="#" class="circle-btn orange">Projects</a>
-          <a href="#" class="circle-btn blue">Contact</a>
-          <a href="#" class="circle-btn gray">About</a>
+    <header>
+      <div class="header-container">
+        <img src="ddd.png" alt="Logo" class="logo">
+        <h1>PORTFOLIO</h1>
       </div>
-  </div>
-
-
-
-
-  <section class="hero-photo-section fade-in">
-    <div class="hero-container">
-      <img src="ddd.png" alt="আমার ছবি" class="hero-photo">
-      <h2 class="hero-name">আমি নিরব</h2>
-      <p class="hero-tagline">একজন ভবিষ্যৎ সফটওয়্যার ইঞ্জিনিয়ার</p>
-    </div>
-  </section>
-
-
-    <div class="header-container">
-      <img src="untitled-n.jpg" alt="NIROB" class="logo" width="80">
-      <div class="text-content">
-        <h1>NIROB PORTFOLIO</h1>
         <p>Crafting future with code and creativity</p>
       </div>
     </div>
     <nav>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul>
         <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('about')">About Us</a></li>
-        <li><a href="#" onclick="showSection('traditional')">Traditional</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
         <li><a href="#" onclick="showSection('services')">Services</a></li>
         <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="showSection('testimonials')">Testimonials</a></li>
         <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-        <li><a href="#" onclick="showSection('earn')">Earn Money</a></li>
-        <li><a href="#" onclick="showSection('video')">Video</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="active fade-in">
-    <div class="inner-section" id="about">
-      <h2>About Us</h2>
-      <p>We are passionate developers crafting digital experiences.</p>
+
+
+<!-- Blog Section -->
+<section id="blog" class="fade-in">
+  <h2>📝 Blog</h2>
+  <div class="blog-grid">
+    <div class="blog-post">
+      <h3>Why Learn Web Development?</h3>
+      <p>Explore the reasons why learning web development is a great career move.</p>
+      <a href="#">Read More →</a>
     </div>
-    <div class="inner-section" id="traditional">
-      <h2>Traditional</h2>
-      <p>Our values and cultural inspirations influence our work.</p>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
     </div>
-    <div class="inner-section" id="services">
-      <h2>Services</h2>
-      <p>Web development, UI/UX design, and more.</p>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
     </div>
-    <div class="inner-section" id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>This is an awesome project that solves real problems.</p>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="blog-post">
+      <h3>JavaScript Tips for Beginners</h3>
+      <p>Practical tips to improve your JavaScript skills from day one.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="fade-in">
+  <h2>🚀 My Skills</h2>
+  <div class="skill">
+    <span>HTML</span>
+    <div class="bar"><div class="fill" style="width: 95%;">95%</div></div>
+  </div>
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar"><div class="fill" style="width: 90%;">90%</div></div>
+  </div>
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div class="fill" style="width: 85%;">85%</div></div>
+  </div>
+</section>
+
+<!-- Theme Switcher Button -->
+<div class="theme-switcher">
+  <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+</div>
+
+
+
+  <section id="home" class="section active fade-in">
+    <div class="hero-photo-section">
+      <div class="hero-container">
+        <img src="untitled-n.jpg" alt="Hero" class="hero-photo">
+        <h2 class="hero-name">আমি নিরব</h2>
+        <p class="hero-tagline">আমি একজন সফটওয়্যার ইঞ্জিনিয়ার, আমার ভবিষ্যৎ পরিকল্পনা এমন কিছু সফটওয়্যার বানানো যা মানুষের কাছে ইসলাম বুঝা এবং মান সহজ হয় , সফটওয়্যার এ ইসলাম বুঝার জন্য সকল  তথ্য থাকবে । </p>
       </div>
-    </div>
-    <div class="inner-section" id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out for collaboration or ideas!</p>
-      <a href="mailto:fujailakanda8655@gmail.com?subject=Hiring%20NIROB&body=Hi%20NIROB%2C%20I%20want%20to%20hire%20you%20for%20a%20project." class="hire-me-btn">Hire Me</a>
     </div>
   </section>
 
- 
-  
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>Self-motivated web developer with a love for clean UI and modern design.</p>
+  </section>
 
-  <!-- অন্যান্য সেকশন গুলো -->
-  <section id="single-about"><h2>About Us</h2><p>We are passionate developers...</p></section>
-  <section id="single-traditional"><h2>Traditional</h2><p>Our values and culture...</p></section>
-  <section id="single-services"><h2>Services</h2><p>Web dev, UI/UX, etc...</p></section>
-  <section id="single-projects"><h2>Projects</h2><p>Details about projects...</p></section>
-  <section id="single-contact"><h2>Contact</h2><p>Get in touch!</p></section>
+  <section id="services" class="section fade-in">
+    <h2>Services</h2>
+    <ul>
+      <li>🔧 Web Design & Development</li>
+      <li>🎨 UI/UX Design</li>
+      <li>🚀 Performance Optimization</li>
+    </ul>
+  </section>
 
-  <section id="single-earn">
-    <h2>Earn Money with Your Website</h2>
-    <div class="inner-section">
-      <h3>💼 Freelance Projects</h3>
-      <p>Create your portfolio and attract clients for web development.</p>
-    </div>
-    <div class="inner-section">
-      <h3>🎨 Sell Templates</h3>
-      <p>Build HTML/CSS templates and sell them on ThemeForest, Gumroad, etc.</p>
-    </div>
-    <div class="inner-section">
-      <h3>📢 Google AdSense</h3>
-      <p>Add blog content to earn money through Google Ads on your site.</p>
-    </div>
-    <div class="inner-section">
-      <h3>📚 Teach Web Development</h3>
-      <p>Offer free and premium courses or tutorials to earn from your skills.</p>
-    </div>
-    <div class="inner-section">
-      <h3>🔗 Affiliate Marketing</h3>
-      <p>Promote domain/hosting services and earn commission per sale.</p>
-      <a href="https://www.amazon.com/baby-reg?&linkCode=ll2&tag=nirobdev20-20&linkId=b9eb7042c90f38ec9711ac5170b80bce&language=en_US&ref_=as_li_ss_tl" target="_blank" class="affiliate-btn">🎁 Amazon Baby Registry</a>
-    </div>
-    <div class="inner-section">
-      <h3>🛑️ Sell Digital Products</h3>
-      <p>Sell your own eBooks, designs, or mini-projects from your website.</p>
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>My Portfolio Site</h3>
+      <p>A modern, responsive portfolio site with animations and dark mode support.</p>
     </div>
   </section>
 
-  <section id="recommended-tools" class="fade-in">
-    <h2>🔥 Tech Tools I Use</h2>
-    <div class="tools-grid">
-      <div class="tool-item">
-        <img src="https://m.media-amazon.com/images/I/81w+3k4X0yL._AC_SL1500_.jpg" alt="Laptop" />
-        <h3>💻 HP Pavilion 15 Laptop</h3>
-        <p>Perfect for coding and design work.</p>
-        <a href="https://www.amazon.com/dp/B09XYZ1234?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
-      </div>
-      <div class="tool-item">
-        <img src="https://m.media-amazon.com/images/I/71KR2i6-WaL._AC_SL1500_.jpg" alt="Headphones" />
-        <h3>🎧 Logitech G435 Wireless Headset</h3>
-        <p>Great sound for focus while working or coding.</p>
-        <a href="https://www.amazon.com/dp/B08XYZ5678?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
-      </div>
-      <div class="tool-item">
-        <img src="https://m.media-amazon.com/images/I/71c5Vn3WmdL._AC_SL1500_.jpg" alt="Mouse" />
-        <h3>🟡️ Logitech MX Master 3</h3>
-        <p>Best productivity mouse for developers.</p>
-        <a href="https://www.amazon.com/dp/B07XYZ9012?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
-      </div>
+  <section id="testimonials" class="section fade-in">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Nirob is one of the most creative developers I’ve worked with!"</p>
+      <h4>- Client A</h4>
+    </div>
+    <div class="testimonial">
+      <p>"His attention to detail and passion for UI really stands out."</p>
+      <h4>- Client B</h4>
     </div>
   </section>
 
-  <section id="video" class="fade-in">
-    <h2>Watch My Video</h2>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Uk7LaPqjI2Q" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mnqedgla" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
@@ -161,44 +188,29 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.querySelector('nav ul');
-      menu.classList.toggle('show');
+
+
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
+
+
+
+
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
     }
 
-    function hideAllSections() {
-      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-    }
-
-    function showSection(section) {
-      hideAllSections();
-      let target;
-      if (section === 'home') {
-        target = 'home';
-      } else if (section === 'video') {
-        target = 'video';
-      } else {
-        target = 'single-' + section;
-      }
-      const el = document.getElementById(target);
-      if (el) el.style.display = 'block';
-    }
-
-    window.onload = function () {
-      hideAllSections();
-      const home = document.getElementById('home');
-      home.style.display = 'block';
-      setTimeout(() => home.classList.add('visible'), 200);
-
-      document.addEventListener("scroll", () => {
-        document.querySelectorAll('.fade-in').forEach(el => {
-          const top = el.getBoundingClientRect().top;
-          if (top < window.innerHeight - 50) {
-            el.classList.add('visible');
-          }
-        });
-      });
-    }
+    window.onload = () => {
+      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('home').style.display = 'block';
+    };
   </script>
 </body>
 </html>
