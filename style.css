@@ -32,6 +32,12 @@ body {
   animation: spin 1s linear infinite;
 }
 
+
+
+
+
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -264,4 +270,77 @@ footer {
     width: 100%;
     height: auto;
   }
+}
+.about-section {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+}
+.hero-photo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: #fdfdfd;
+}
+
+.hero-container {
+  max-width: 600px;
+}
+
+.hero-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.hero-name {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.hero-tagline {
+  font-size: 18px;
+  color: #555;
 }

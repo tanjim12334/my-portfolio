@@ -8,19 +8,44 @@
 </head>
 <body>
   <header>
+
+
+    <div class="profile-pic">
+      <img src="untitled-n.jpg" alt="Nirob">
+  </div>
+  <div class="intro">
+      <h1>Nirob</h1>
+      <h2>Web Developer</h2>
+      <p>I am a self-motivated web developer passionate about modern UI and creativity.</p>
+      <div class="buttons">
+          <a href="#" class="circle-btn green">Resume</a>
+          <a href="#" class="circle-btn orange">Projects</a>
+          <a href="#" class="circle-btn blue">Contact</a>
+          <a href="#" class="circle-btn gray">About</a>
+      </div>
+  </div>
+
+
+
+
+  <section class="hero-photo-section fade-in">
+    <div class="hero-container">
+      <img src="ddd.png" alt="আমার ছবি" class="hero-photo">
+      <h2 class="hero-name">আমি নিরব</h2>
+      <p class="hero-tagline">একজন ভবিষ্যৎ সফটওয়্যার ইঞ্জিনিয়ার</p>
+    </div>
+  </section>
+
+
     <div class="header-container">
-      <img src="ddd.png" alt="NIROB" class="logo" width="80">
+      <img src="untitled-n.jpg" alt="NIROB" class="logo" width="80">
       <div class="text-content">
         <h1>NIROB PORTFOLIO</h1>
         <p>Crafting future with code and creativity</p>
       </div>
     </div>
     <nav>
-      <!-- nav ট্যাগের ভিতরে (nav ul এর আগে) এটা বসাও -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  ☰
-</div>
-
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <ul>
         <li><a href="#" onclick="showSection('home')">Home</a></li>
         <li><a href="#" onclick="showSection('about')">About Us</a></li>
@@ -61,6 +86,10 @@
     </div>
   </section>
 
+ 
+  
+
+  <!-- অন্যান্য সেকশন গুলো -->
   <section id="single-about"><h2>About Us</h2><p>We are passionate developers...</p></section>
   <section id="single-traditional"><h2>Traditional</h2><p>Our values and culture...</p></section>
   <section id="single-services"><h2>Services</h2><p>Web dev, UI/UX, etc...</p></section>
@@ -90,8 +119,6 @@
       <p>Promote domain/hosting services and earn commission per sale.</p>
       <a href="https://www.amazon.com/baby-reg?&linkCode=ll2&tag=nirobdev20-20&linkId=b9eb7042c90f38ec9711ac5170b80bce&language=en_US&ref_=as_li_ss_tl" target="_blank" class="affiliate-btn">🎁 Amazon Baby Registry</a>
     </div>
-    
-      
     <div class="inner-section">
       <h3>🛑️ Sell Digital Products</h3>
       <p>Sell your own eBooks, designs, or mini-projects from your website.</p>
@@ -101,28 +128,24 @@
   <section id="recommended-tools" class="fade-in">
     <h2>🔥 Tech Tools I Use</h2>
     <div class="tools-grid">
-
       <div class="tool-item">
         <img src="https://m.media-amazon.com/images/I/81w+3k4X0yL._AC_SL1500_.jpg" alt="Laptop" />
         <h3>💻 HP Pavilion 15 Laptop</h3>
         <p>Perfect for coding and design work.</p>
         <a href="https://www.amazon.com/dp/B09XYZ1234?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
       </div>
-
       <div class="tool-item">
         <img src="https://m.media-amazon.com/images/I/71KR2i6-WaL._AC_SL1500_.jpg" alt="Headphones" />
         <h3>🎧 Logitech G435 Wireless Headset</h3>
         <p>Great sound for focus while working or coding.</p>
         <a href="https://www.amazon.com/dp/B08XYZ5678?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
       </div>
-
       <div class="tool-item">
         <img src="https://m.media-amazon.com/images/I/71c5Vn3WmdL._AC_SL1500_.jpg" alt="Mouse" />
         <h3>🟡️ Logitech MX Master 3</h3>
         <p>Best productivity mouse for developers.</p>
         <a href="https://www.amazon.com/dp/B07XYZ9012?tag=nirob-20" target="_blank" class="affiliate-btn">Buy on Amazon</a>
       </div>
-
     </div>
   </section>
 
@@ -138,11 +161,10 @@
   </footer>
 
   <script>
-function toggleMenu() {
-  const menu = document.querySelector('nav ul');
-  menu.classList.toggle('show');
-}
-
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('show');
+    }
 
     function hideAllSections() {
       document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
@@ -150,7 +172,6 @@ function toggleMenu() {
 
     function showSection(section) {
       hideAllSections();
-
       let target;
       if (section === 'home') {
         target = 'home';
@@ -159,7 +180,6 @@ function toggleMenu() {
       } else {
         target = 'single-' + section;
       }
-
       const el = document.getElementById(target);
       if (el) el.style.display = 'block';
     }
