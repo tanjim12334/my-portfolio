@@ -311,3 +311,34 @@
     grid-template-columns: 1fr;
   }
 }
+/* ডেক্সটপে এটা দেখাবো না */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* মোবাইল ভিউতে menu toggle দেখাবো */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+}

@@ -16,6 +16,11 @@
       </div>
     </div>
     <nav>
+      <!-- nav ট্যাগের ভিতরে (nav ul এর আগে) এটা বসাও -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
+
       <ul>
         <li><a href="#" onclick="showSection('home')">Home</a></li>
         <li><a href="#" onclick="showSection('about')">About Us</a></li>
@@ -133,6 +138,12 @@
   </footer>
 
   <script>
+function toggleMenu() {
+  const menu = document.querySelector('nav ul');
+  menu.classList.toggle('show');
+}
+
+
     function hideAllSections() {
       document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
     }
