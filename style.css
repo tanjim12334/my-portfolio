@@ -253,3 +253,61 @@
     background-color: #e08800;
   }
   
+
+
+
+
+  /* style.css এর নিচের দিকে যুক্ত করো */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .inner-section {
+    padding: 10px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tool-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .affiliate-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
