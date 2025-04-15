@@ -1,23 +1,21 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
   }
   
   body {
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    background: #f4f4f4;
     color: #333;
   }
   
+  /* Loader - optional */
   .loader {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,112 +23,233 @@
   }
   
   .loader span {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #007bff;
-    border-top: 5px solid transparent;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #3498db;
+    border-top-color: transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
   
   @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
   }
   
+  /* Header & Nav */
   header {
-    background: #007bff;
+    background-color: #007bff;
     color: white;
-    padding: 1.5rem 1rem;
+    padding: 10px;
+    position: relative;
   }
   
   .header-container {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    max-width: 1000px;
-    margin: auto;
+    gap: 20px;
   }
   
   .logo {
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  nav {
     position: absolute;
     top: 20px;
-    left: 20px;
-    width: 100px;
-  }
-  .logo img {
-    width: 100%;
-    height: auto;
+    right: 20px;
   }
   
-  .text-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
   }
   
-  .text-content p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
-  @media (max-width: 600px) {
-    .header-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .logo {
-      height: 60px;
-    }
-  }
-  
-  section {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .btn {
-    padding: 0.75rem 1.5rem;
-    background: #007bff;
+  nav ul li a {
+    text-decoration: none;
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
+    background: #1323d7;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
   }
   
-  .btn:hover {
-    background: #0056b3;
+  nav ul li a:hover {
+    background-color: #8f0808;
   }
   
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .project {
+  /* Section Style */
+  section {
+    display: none;
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
     background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
-  .project:hover {
-    transform: translateY(-5px);
+  section.active {
+    display: block;
+  }
+  
+  .inner-section {
+    margin-bottom: 30px;
+    background: #fefefe;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
   }
   
   footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: #343a40;
+    background-color: #222;
     color: white;
-    margin-top: 3rem;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  /* Earn section */
+  #earn {
+    background-color: #fffbe6;
+  }
+  
+  #earn h2 {
+    color: #ff9900;
+  }
+  
+  #earn .inner-section {
+    background-color: #fffdf5;
+    border-left: 5px solid #ffcc00;
+  }
+  
+  /* Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hire Me Button */
+  .hire-me-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00b894;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .hire-me-btn:hover {
+    background: #019875;
+  }
+  
+  /* Video */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hire-me-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hire-me-btn:hover {
+    background-color: #0056b3;
+  }
+  .tools-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .tool-item {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .tool-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .affiliate-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .affiliate-btn:hover {
+    background: #e08800;
+  }
+  .affiliate-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF9900;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .affiliate-btn:hover {
+    background-color: #e08800;
   }
   
