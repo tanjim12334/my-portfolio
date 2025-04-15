@@ -1,328 +1,232 @@
+/* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  body {
-    background: #f4f4f4;
-    color: #333;
-  }
-  
-  /* Loader - optional */
-  .loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-  
-  .loader span {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #3498db;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  
-  /* Header & Nav */
-  header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  
-  nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    background: #1323d7;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    background-color: #8f0808;
-  }
-  
-  /* Section Style */
-  section {
-    display: none;
-    padding: 40px;
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  section.active {
-    display: block;
-  }
-  
-  .inner-section {
-    margin-bottom: 30px;
-    background: #fefefe;
-    padding: 20px;
-    border-left: 5px solid #007bff;
-    border-radius: 8px;
-  }
-  
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  /* Earn section */
-  #earn {
-    background-color: #fffbe6;
-  }
-  
-  #earn h2 {
-    color: #ff9900;
-  }
-  
-  #earn .inner-section {
-    background-color: #fffdf5;
-    border-left: 5px solid #ffcc00;
-  }
-  
-  /* Animation */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Hire Me Button */
-  .hire-me-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #00b894;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: background 0.3s ease;
-  }
-  
-  .hire-me-btn:hover {
-    background: #019875;
-  }
-  
-  /* Video */
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-  }
-  
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .hire-me-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hire-me-btn:hover {
-    background-color: #0056b3;
-  }
-  .tools-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .tool-item {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 15px;
-    width: 280px;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .tool-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .affiliate-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #ff9900;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  
-  .affiliate-btn:hover {
-    background: #e08800;
-  }
-  .affiliate-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF9900;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .affiliate-btn:hover {
-    background-color: #e08800;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
+body {
+  background: #f4f4f4;
+  color: #333;
+}
 
+/* Loader */
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
 
+.loader span {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #3498db;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
-  /* style.css এর নিচের দিকে যুক্ত করো */
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .inner-section {
-    padding: 10px;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .tool-item img {
-    width: 100%;
-    height: auto;
-  }
-
-  iframe {
-    width: 100%;
-    height: auto;
-  }
-
-  .affiliate-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+nav {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  background: #1323d7;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #8f0808;
+}
+
+/* Sections */
+section {
+  display: none;
+  padding: 40px;
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.active {
+  display: block;
+}
+
+.inner-section {
+  margin-bottom: 30px;
+  background: #fefefe;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Earn section */
+#earn {
+  background-color: #fffbe6;
+}
+
+#earn h2 {
+  color: #ff9900;
+}
+
+#earn .inner-section {
+  background-color: #fffdf5;
+  border-left: 5px solid #ffcc00;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hire Me Button */
+.hire-me-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hire-me-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Video */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Tools */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
+.tool-item {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tool-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Affiliate Button */
+.affiliate-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ff9900;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.affiliate-btn:hover {
+  background: #e08800;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .tools-grid {
-    grid-template-columns: 1fr;
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
-/* ডেক্সটপে এটা দেখাবো না */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  padding: 10px;
-}
 
-/* মোবাইল ভিউতে menu toggle দেখাবো */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  nav {
+    position: static;
+    width: 100%;
   }
 
   nav ul {
@@ -340,5 +244,24 @@
   nav ul li {
     padding: 10px 0;
     border-bottom: 1px solid #444;
+  }
+
+  .inner-section {
+    padding: 10px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .affiliate-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
   }
 }
