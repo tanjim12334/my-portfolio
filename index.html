@@ -1,216 +1,264 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NIROB - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nirob.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navbar -->
 
-  <div class="dark-mode-toggle">
-    <label>
-      <input type="checkbox" id="darkToggle">
-      🌙 Dark Mode
-    </label>
-  </div>
+  <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+  
 
-  <header>
-    <header>
-      <div class="header-container">
-        <img src="ddd.png" alt="Logo" class="logo">
-        <h1>PORTFOLIO</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ddd.png" class="rounded-circle me-2" alt="logo">
+        <h3>PORTFOLIO</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="video.html">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Service</a></li>
+        </ul>
       </div>
-        <p>Crafting future with code and creativity</p>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section container-fluid text-white d-flex flex-column flex-lg-row align-items-center justify-content-between py-5 px-4">
+    <div class="hero-text">
+      <h1 class="display-4 fw-bold">My Name is Nirob</h1>
+      <p class="lead">This is my website. My future plan: software development etc.</p>
+      <a href="mailto:fujailakanda8655@gmail.com" class="btn btn-outline-light mt-3">Hire Me</a>
+    </div>
+    <div class="mt-4 mt-lg-0">
+      <img src="Untitled-n.jpg" class="rounded-circle shadow-lg" alt="Nirob Image">
+    </div>
+  </section>
+
+
+<!-- About Section -->
+<section id="about" class="container text-white text-center py-5">
+    <img src="Untitled-n.jpg" class="rounded-circle mb-4" alt="About Nirob">
+    <h2>আমার সম্পর্কে</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nirob একজন ভবিষ্য সফটওয়ার ডেভেলপার। তাঁর স্বপ্ন হলো বিশ্বমানের প্রজেক্ট ত্রিরি করা।</p>
+  </section>
+
+<!-- Project Section -->
+<section id="project" class="container text-white py-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <ul>
+      <li>💻 Website Project - Portfolio, Landing Page, Blog</li>
+      <li>🎨 Graphic Design - Logos, Flyers, T-shirts</li>
+      <li>🎬 Video Editing - Music videos, photo slideshows</li>
+      <li>🚀 Motion Graphics - Cartoon animation</li>
+      <li>📄 Microsoft Office - Word reports, Excel sheets</li>
+    </ul>
+  </section>
+ 
+  <!-- Products Section -->
+  <section id="products" class="container text-white py-5">
+    <h2 class="text-center">100+ Products</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Untitled-n.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 1</p>
+        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
+        <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('about')">About</a></li>
-        <li><a href="#" onclick="showSection('services')">Services</a></li>
-        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-        <li><a href="#" onclick="showSection('testimonials')">Testimonials</a></li>
-        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-
-
-<!-- Blog Section -->
-<section id="blog" class="fade-in">
-  <h2>📝 My Projects</h2>
-  <div class="blog-grid">
-    <div class="blog-post">
-      <h3>Why Learn Web Development?</h3>
-      <p>Explore the reasons why learning web development is a great career move.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>JavaScript Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Why Learn English Spoken</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Can you Learn Graphic Desgin</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Yon Can Learn Codding</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Why are Youn Leanr Prosse Internet</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>You Learn Softwer Enginiaring</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Internet Brousing Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>JavaScript Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Catorn Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Animation Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="blog-post">
-      <h3>Motion Graphic Tips for Beginners</h3>
-      <p>Practical tips to improve your JavaScript skills from day one.</p>
-      <a href="#">Read More →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="fade-in">
-  <h2>🚀 My Skills</h2>
-  <div class="skill">
-    <span>HTML</span>
-    <div class="bar"><div class="fill" style="width: 95%;">95%</div></div>
-  </div>
-  <div class="skill">
-    <span>CSS</span>
-    <div class="bar"><div class="fill" style="width: 90%;">90%</div></div>
-  </div>
-  <div class="skill">
-    <span>JavaScript</span>
-    <div class="bar"><div class="fill" style="width: 85%;">85%</div></div>
-  </div>
-</section>
-
-<!-- Theme Switcher Button -->
-<div class="theme-switcher">
-  <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+<!-- Blog Filter/Search -->
+<div class="container py-3 d-flex gap-2">
+  <input type="text" id="blogSearch" class="form-control" placeholder="Search blog by tag... (e.g., design, project)" onkeyup="filterBlogs()">
+  <button class="btn btn-outline-warning" onclick="resetBlogs()">Reset</button>
 </div>
 
-
-
-  <section id="home" class="section active fade-in">
-    <div class="hero-photo-section">
-      <div class="hero-container">
-        <img src="untitled-n.jpg" alt="Hero" class="hero-photo">
-        <h2 class="hero-name">আমি নিরব</h2>
-        <p class="hero-tagline">আমি একজন সফটওয়্যার ইঞ্জিনিয়ার, আমার ভবিষ্যৎ পরিকল্পনা এমন কিছু সফটওয়্যার বানানো যা মানুষের কাছে ইসলাম বুঝা এবং মান সহজ হয় , সফটওয়্যার এ ইসলাম বুঝার জন্য সকল  তথ্য থাকবে । </p>
+   <!-- Blog Section -->
+   <section id="blog" class="container text-white py-5">
+    <h2 class="text-center mb-4">My Blog</h2>
+    <div class="row" id="blogList">
+      <div class="col-md-4 mb-4 blog-card" data-tags="journey beginner">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Blog Post 1">
+          <div class="card-body">
+            <h5 class="card-title">How I Started Coding</h5>
+            <span class="tag">Journey</span><span class="tag">Beginner</span>
+            <p class="card-text">My journey from beginner to web developer. Here’s what I learned...</p>
+            <a href="https://nirob.com/blog/how-i-started-coding" class="btn btn-outline-light">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 blog-card" data-tags="design tools">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Blog Post 2">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 Design Tools I Use</h5>
+            <span class="tag">Design</span><span class="tag">Tools</span>
+            <p class="card-text">These tools make designing fun and easy. Let’s dive in!</p>
+            <a href="https://nirob.com/blog/top-5-design-tools" class="btn btn-outline-light">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 blog-card" data-tags="projects portfolio">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Blog Post 3">
+          <div class="card-body">
+            <h5 class="card-title">My Favorite Projects</h5>
+            <span class="tag">Projects</span><span class="tag">Portfolio</span>
+            <p class="card-text">Check out the most fun and challenging projects I've built so far.</p>
+            <a href="https://nirob.com/blog/favorite-projects" class="btn btn-outline-light">Read More</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p>Self-motivated web developer with a love for clean UI and modern design.</p>
+  <!-- Video Section -->
+  <section id="video" class="container text-white py-5">
+    <h2 class="text-center mb-4">My YouTube Videos</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jd3v3tU8O24" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/apnSqtsKFpc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/EFUSvjts3HQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/vtnovyH99RY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ViWAM7MfAg8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 mb-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/_Y_iYQS686o" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
   </section>
 
-  <section id="services" class="section fade-in">
-    <h2>Services</h2>
+  <!-- Services Section -->
+  <section id="services" class="container text-white py-5">
+    <h2 class="text-center mb-4">All My Services</h2>
     <ul>
-      <li>🔧 Web Design & Development</li>
-      <li>🎨 UI/UX Design</li>
-      <li>🚀 Performance Optimization</li>
+      <li>আপনার প্রয়োজনীয় সকল পন্য এখান থেকে পেতে পারেন</li>
+      <li>আপনার পছন্দের সকল ভিডিও এই ওয়েবসাইটে পাবেন</li>
+      <li>আমার সম্পর্কে জানতে পারবেন</li>
+      <li>ইসলামিক তথ্য পাবেন</li>
+      <li>আমার কাজগুলো দেখে বুঝতে পারবেন আমি কি কি কাজ জানি</li>
+      <li>আমার সকল সার্ভিস দেখতেও পাবেন এবং নিতেও পারবেন</li>
     </ul>
   </section>
 
-  <section id="projects" class="section fade-in">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>My Portfolio Site</h3>
-      <p>A modern, responsive portfolio site with animations and dark mode support.</p>
-    </div>
-  </section>
 
-  <section id="testimonials" class="section fade-in">
-    <h2>Testimonials</h2>
-    <div class="testimonial">
-      <p>"Nirob is one of the most creative developers I’ve worked with!"</p>
-      <h4>- Client A</h4>
-    </div>
-    <div class="testimonial">
-      <p>"His attention to detail and passion for UI really stands out."</p>
-      <h4>- Client B</h4>
-    </div>
-  </section>
-
-  <section id="contact" class="section fade-in">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mnqedgla" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 NIROB. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>Address: Issowrgonj, Mymensingh</p>
+    <p>Mobile: 01686558617 | Email: fujailakanda8655@gmail.com</p>
   </footer>
 
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
   <script>
-
-
-function toggleTheme() {
-  document.body.classList.toggle('dark');
-}
-
-
-
-
-    const darkToggle = document.getElementById('darkToggle');
-    darkToggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+    function filterBlogs() {
+      const input = document.getElementById('blogSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags');
+        if (tags.includes(input)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
 
-    window.onload = () => {
-      document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
-      document.getElementById('home').style.display = 'block';
-    };
+
+    function resetBlogs() {
+      document.getElementById('blogSearch').value = '';
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        card.style.display = 'block';
+      });
+    }
+
+
+
+
   </script>
+
 </body>
 </html>
+
+
+
+
+
+
