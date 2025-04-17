@@ -1,15 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nirob.com</title>
+  <title>Qur'an Surah Filter</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+ 
 </head>
 <body>
+
+  
+
+
+
+
+  <div class="container">
+    <h1 class="mb-4 text-center">📖 Qur'an Viewer</h1>
+    
+    <div class="container">
+      <h2>📖 Filter by Surah</h2>
+      
+      <select id="surahSelect" onchange="loadSurahAyahs()" class="form-select">
+        <option value="">Select a Surah</option>
+      </select>
+  
+      <div id="results" class="mt-4"></div>
+    </div>
+  
+    <div id="quranContainer" style="padding: 20px; font-size: 20px; direction: rtl;"></div>
+    <div id="quranOutput"></div>
+  
+    <div id="ayahContainer"></div>
+  
+  
+  </div>
+
+  
+
+
+  <div class="container search-section">
+    <h2 class="text-center mb-4">🔍 Qur'an Ayah Search</h2>
+    <div class="input-group mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Enter keyword (e.g. mercy, prayer, light)">
+      <button class="btn btn-primary" onclick="searchAyah()">Search</button>
+    </div>
+    <div id="results"></div>
+  </div>
+
+  
+
+
   <!-- Navbar -->
 
  
@@ -27,6 +71,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="quran.html">Qur'an</a></li>
+
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
@@ -36,7 +82,12 @@
         </ul>
       </div>
     </div>
+
+
   </nav>
+
+
+
 
   <!-- Hero Section -->
   <section class="hero-section container-fluid text-white d-flex flex-column flex-lg-row align-items-center justify-content-between py-5 px-4">
@@ -54,7 +105,7 @@
 <!-- About Section -->
 <section id="about" class="container text-white text-center py-5">
     <img src="untitled-n.jpg" class="rounded-circle mb-4" alt="About Nirob">
-    <h2>আমার সম্পর্কে</h2>
+    <h2>About Me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nirob একজন ভবিষ্য সফটওয়ার ডেভেলপার। তাঁর স্বপ্ন হলো বিশ্বমানের প্রজেক্ট ত্রিরি করা।</p>
   </section>
 
@@ -70,64 +121,68 @@
     </ul>
   </section>
  
+
+
   <!-- Products Section -->
   <section id="products" class="container text-white py-5">
     <h2 class="text-center">100+ Products</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <img src="a.png" class="img-fluid" alt="Product 1">
+        <img src="https://m.media-amazon.com/images/I/71hQYT5OvcL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
         <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <a href="https://www.amazon.com/Instant-Pot-Pressure-Steamer-Sterilizer/dp/B08PQ2KWHS?_encoding=UTF8&tag=nirobdev20-20&linkId=35456e26a900af56ff0a426d3f146fc2&language=en_US&ref_=as_li_ss_tl" target="_blank" class="affiliate-btn">
+          🛒 Buy Now on Amazon
+        </a>
+        
+      
+        
       </div>
       <div class="col-md-4 mb-4">
-        <img src="b.png" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="c.png" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="d.png" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="e.jpg" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/71S4o9vR1FL.__AC_SX300_SY300_QL70_FMwebp_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 5</p>
+        <a href="https://www.amazon.com/dp/B0CKKD1GXW?pd_rd_i=B0CKKD1GXW&pd_rd_w=Khj1G&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=QN2E21B02A0JWJBP16Q9&pd_rd_wg=MLN6K&pd_rd_r=2a0a345b-da14-4619-a66d-307452a1885f&s=kitchen&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=132050c87addca349d4096bbcc8c7c5c&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="d_files/2023Q2_GW_EE_AccentFurniture_D_Quad_186x116._SY116_CB594237035_.jpg" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       </div>
       <div class="col-md-4 mb-4">
-        <img src="d_files/2023Q2_GW_EE_LaundryLuxe_D_Quad_186x116._SY116_CB594237035_.jpg" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
-      </div>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
       <div class="col-md-4 mb-4">
-        <img src="d_files/11++B3A2NEL.png" class="img-fluid" alt="Product 1">
-        <p class="mt-1">Product 1</p>
-        <a href="https://www.bdshop.com/catalogsearch/result/?q=gearup" class="btn btn-buy-now" target="_blank">
-        <i class="fas fa-shopping-cart"></i> Buy Now</a>
-      </div>
+        <img src="https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX679_.jpg" class="img-fluid" alt="Product 1">
+        <p class="mt-1">Product 4</p>
+        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08WCLJ7JG?pd_rd_w=oInmC&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=4NK5DVAJTPC2QZ92RFYG&pd_rd_wg=b61ji&pd_rd_r=267b3309-e498-4381-82fc-048f41039ac7&pd_rd_i=B08WCLJ7JG&th=1&linkCode=ll1&tag=nirobdev20-20&linkId=844ebe6fd762d2697e41c22a6ea46c01&language=en_US&ref_=as_li_ss_tl" target="_blank"class="btn btn-buy-now" target="_blank">
+          <i class="fas fa-shopping-cart"></i> Buy Now</a>
     </div>
   </section>
 
@@ -175,6 +230,13 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
   </section>
 
   <!-- Video Section -->
@@ -206,12 +268,12 @@
   <section id="services" class="container text-white py-5">
     <h2 class="text-center mb-4">All My Services</h2>
     <ul>
-      <li>আপনার প্রয়োজনীয় সকল পন্য এখান থেকে পেতে পারেন</li>
-      <li>আপনার পছন্দের সকল ভিডিও এই ওয়েবসাইটে পাবেন</li>
-      <li>আমার সম্পর্কে জানতে পারবেন</li>
-      <li>ইসলামিক তথ্য পাবেন</li>
-      <li>আমার কাজগুলো দেখে বুঝতে পারবেন আমি কি কি কাজ জানি</li>
-      <li>আমার সকল সার্ভিস দেখতেও পাবেন এবং নিতেও পারবেন</li>
+      <li>You can get all the products you need from here</li>
+      <li>You can find all the videos you like on this website</li>
+      <li>You can learn about me</li>
+      <li>You can get Islamic information</li>
+      <li>You can understand what I know by watching my work</li>
+      <li>You can also see and take all my services</li>
     </ul>
   </section>
 
@@ -223,10 +285,10 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
 
 
-  <script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">    
     function filterBlogs() {
       const input = document.getElementById('blogSearch').value.toLowerCase();
       const cards = document.querySelectorAll('.blog-card');
@@ -241,24 +303,86 @@
     }
 
 
-    function resetBlogs() {
-      document.getElementById('blogSearch').value = '';
-      const cards = document.querySelectorAll('.blog-card');
-      cards.forEach(card => {
-        card.style.display = 'block';
-      });
-    }
+
+  function resetResults() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('results').innerHTML = '';
+  }
+
+
+
+  function toggleTheme() {
+  const html = document.documentElement;
+  if (html.getAttribute("data-bs-theme") === "dark") {
+    html.setAttribute("data-bs-theme", "light");
+    document.body.classList.remove("bg-dark", "text-light");
+    document.body.classList.add("bg-light", "text-dark");
+  } else {
+    html.setAttribute("data-bs-theme", "dark");
+    document.body.classList.remove("bg-light", "text-dark");
+    document.body.classList.add("bg-dark", "text-light");
+  }
+}
+
+function searchAyah() {
+  const keyword = document.getElementById("searchInput").value.trim();
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "<p>Searching...</p>";
+
+  if (!keyword) {
+    resultsDiv.innerHTML = "<p>Please enter a keyword to search.</p>";
+    return;
+  }
+
+  fetch(`https://api.quran.com/v4/search?q=${keyword}&size=5&page=1&language=en`)
+    .then(res => res.json())
+    .then(data => {
+      if (!data?.data?.matches?.length) {
+        resultsDiv.innerHTML = "<p>No Ayahs found for this keyword.</p>";
+        return;
+      }
+
+      const cards = data.data.matches.map(ayah => `
+        <div class="result-card">
+          <div class="ayah-arabic">${ayah.text}</div>
+          <div class="ayah-translation">Surah ${ayah.surah_id}, Ayah ${ayah.verse_id}</div>
+        </div>
+      `).join("");
+
+      resultsDiv.innerHTML = cards;
+    })
+    .catch(err => {
+      resultsDiv.innerHTML = "<p>Error fetching data. Please try again later.</p>";
+      console.error(err);
+    });
+}
+
+
+document.getElementById('darkSwitch').addEventListener('change', function() {
+  document.body.classList.toggle('dark-mode');
+});
+
+ src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+
+  AOS.init();
 
 
 
 
-  </script>
+
+  src="script.js"
+
+
+</script>
 
 </body>
+
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+
 </html>
-
-
-
 
 
 
