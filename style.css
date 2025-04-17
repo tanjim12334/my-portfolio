@@ -146,6 +146,7 @@ ul li {
 
 #products img:hover {
   transform: scale(1.05);
+  color: #b90505;
 }
 
 /* Video Section */
@@ -316,7 +317,7 @@ body {
 
 #blog .card {
   transition: transform 0.3s ease;
-  background-color: #1a1a1a;
+  background-color: #5159eb;
 }
 #blog .card:hover {
   transform: translateY(-5px);
@@ -325,7 +326,7 @@ body {
 .tag {
   font-size: 0.75rem;
   background: #333;
-  color: #f9a825;
+  color: #c20404;
   padding: 2px 6px;
   border-radius: 4px;
   margin-right: 5px;
@@ -339,7 +340,7 @@ body {
 }
 
 .btn-buy-now {
-  background: linear-gradient(135deg, #f9a825, #f57f17);
+  background: linear-gradient(135deg, #0cfff7, #0e58f9);
   color: white;
   border: none;
   border-radius: 50px;
@@ -355,7 +356,7 @@ body {
 }
 
 .btn-buy-now:hover {
-  background: linear-gradient(135deg, #f57f17, #f9a825);
+  background: linear-gradient(135deg, #042bd7, #ff1818);
   transform: scale(1.08);
   animation: bounce 0.5s ease;
 }
@@ -365,8 +366,8 @@ body {
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 10px #f57f17; }
-  to { box-shadow: 0 0 20px #f9a825, 0 0 30px #f57f17; }
+  from { box-shadow: 0 0 10px #01340c; }
+  to { box-shadow: 0 0 20px #030c70, 0 0 30px #9e0808; }
 }
 
 @keyframes shake {
