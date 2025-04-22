@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #64adc8, #9c90d8, #f2709c);
+  background: linear-gradient(135deg, #fdc3c3, #d3fff1, #ffb5cd);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
 }
@@ -74,7 +74,7 @@ footer {
 /* General Styles */
 body {
   background-color: #111;
-  color: #f1f1f1;
+  color: #e01212;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
@@ -91,7 +91,7 @@ section {
 }
 
 .navbar-nav .nav-link {
-  color: #fff !important;
+  color: #ffffff !important;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -105,13 +105,14 @@ section {
 .hero-section {
   background: linear-gradient(to right, #141e30, #243b55);
   text-align: center;
+
 }
 
 .hero-section img {
   height: 500px;
   width: 500px;
  
-  border: 8px solid #fff;
+  border: 8px solid #fa0202;
 }
 
 .hero-section .btn {
@@ -124,7 +125,11 @@ section {
 h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #ffc107;
+  color: #240208;
+  
+}
+p {
+  color: #090422;
 }
 
 /* Project & Service Lists */
@@ -134,6 +139,7 @@ ul {
 }
 
 ul li {
+  color: #000;
   padding: 8px 0;
   font-size: 18px;
 }
@@ -172,7 +178,7 @@ body {
 
 .btn-buy-now {
   background: linear-gradient(135deg, #f9a825, #f57f17);
-  color: white;
+  color: rgb(10, 1, 47);
   border: none;
   border-radius: 50px;
   padding: 12px 26px;
@@ -200,7 +206,7 @@ body {
 
 .btn-buy-now {
   background: linear-gradient(135deg, #f9a825, #f57f17);
-  color: white;
+  color: rgb(10, 1, 56);
   border: none;
   border-radius: 50px;
   padding: 12px 26px;
@@ -266,7 +272,7 @@ body {
 
 .btn-buy-now {
   background: linear-gradient(135deg, #f9a825, #f57f17);
-  color: white;
+  color: rgb(15, 0, 40);
   border: none;
   border-radius: 50px;
   padding: 12px 26px;
@@ -341,7 +347,7 @@ body {
 
 .btn-buy-now {
   background: linear-gradient(135deg, #0cfff7, #0e58f9);
-  color: white;
+  color: rgb(9, 1, 36);
   border: none;
   border-radius: 50px;
   padding: 12px 26px;
